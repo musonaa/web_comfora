@@ -1,0 +1,16 @@
+<!-- holiday_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Next Public Holidays</title>
+</head>
+<body>
+    <h1>Next Public Holidays Worldwide</h1>
+    <ul>
+        {% for holiday in holidays %}
+            <li>{{ holiday['date'] }}: {{ holiday['name'] }} in {{ holiday['countryCode'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

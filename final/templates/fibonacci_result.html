@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fibonacci Sequence Results</h1>
+        <p>The first {{ terms }} terms of the Fibonacci sequence are:</p>
+        <ul>
+            {% for term in fib_series %}
+            <li>{{ term }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('fibonacci') }}" class="button">Back</a>
+    </div>
+    <a href="/fibonacci">Back</a>
+</body>
+</html>
